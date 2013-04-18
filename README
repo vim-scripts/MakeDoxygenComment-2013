@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4530
+
+Inserts java doxygen comments for functions.
+Modified Leif Wickland's script to fix bugs and get it to work correctly in my Terminal IDE android environment.
+
+See original script documentation at:
+http://www.vim.org/scripts/script.php?script_id=674
+
+Changes:
+* Supports functions on lines starting with a tab.
+* Fixes the bug for adding @return for void methods.
+* Fixed the incorrect documentation for what it generates (return instead of returns, and spaces).
+* Removed one extra space at end of parameters.
+* Supports omitting @brief tag. I uploaded a separate MakeDoxygenComment_no_brief.vim so you don't have to edit your .vimrc file if you want it removed.
+
+Limitations
+* Does not support more than one tab, and the tab must be 3 chars (see l:tabSize). Only supports 0 or 1 tab.
+
+Bugs
+I've found a number of bugs that I've been trying to fix. Unfortunately the echo statements are not enough to debug it properly. For now you'll need to do some extra manual editing.
+* Incorrectly puts @return for class summaries.
+* Sometimes does not finish the doxygen comment properly (you have to manually type */)
+
+Developers
+* Uncomment out the echo lines if you are making changes and debugging the script.
