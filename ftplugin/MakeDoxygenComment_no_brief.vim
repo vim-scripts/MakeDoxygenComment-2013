@@ -58,7 +58,8 @@ let loaded_MakeDoxygenComment = 1
 "echo 'Loading MakeDoxygenComment...'
 
 if !exists("g:MakeDoxygenComment_briefTag")
-    let g:MakeDoxygenComment_briefTag="@brief "
+"    let g:MakeDoxygenComment_briefTag="@brief "
+    let g:MakeDoxygenComment_briefTag=""
 endif
 if !exists("g:MakeDoxygenComment_paramTag")
     let g:MakeDoxygenComment_paramTag="@param "
